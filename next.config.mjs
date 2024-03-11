@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',
-}
+import withVideos from "next-videos";
 
-export default nextConfig;
+const nextConfig = {
+  output: "export",
+};
+
+export default {
+  ...nextConfig,
+  ...withVideos(),
+};
