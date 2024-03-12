@@ -37,3 +37,5 @@ next-env.d.ts
 
 #Tauri
 src-tauri/target
+public/SlideShow.mp4
+
