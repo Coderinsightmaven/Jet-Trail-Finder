@@ -39,7 +39,7 @@ pub fn start_simconnect_listener(window: tauri::Window) -> Result<(), InvokeErro
             match client.get_next_dispatch() {
                 Ok(Some(Notification::Object(data))) => {
                     if let Ok(airplane_data) = AircraftUserData::try_from(&data) {
-                        // println!("Airplane Data: {:?}", airplane_data); 
+                        // println!("Airplane Data: {:?}", airplane_data);
                         window
                             .emit("simconnect-data", airplane_data)
                             .expect("Failed to emit data event");
